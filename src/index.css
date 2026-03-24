@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-navy: #124170;
+  --color-secondary-teal: #26667F;
+  --color-accent-green: #67C090;
+  --color-light-mint: #DDF4E7;
+  --color-heading: #124170;
+  --color-body: #26667F;
+}
+
+html {
+  /* removed native smooth scroll to use custom JS ease-in-out */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Base custom utilities */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+/* 3D utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
