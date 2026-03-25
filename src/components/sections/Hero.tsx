@@ -104,7 +104,7 @@ export const Hero = () => {
             <img
               src={heroImage}
               alt="Mayank Kariya"
-              className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-2xl pointer-events-auto scale-105 md:scale-100 lg:scale-125 origin-bottom translate-y-[20%]"
+              className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-2xl pointer-events-auto scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%]"
             />
           </div>
         </motion.div>
