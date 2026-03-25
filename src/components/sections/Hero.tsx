@@ -101,37 +101,11 @@ export const Hero = () => {
 
           {/* Image cropping container that extends upwards to prevent head cutoff */}
           <div className="absolute bottom-0 right-0 w-full h-[200%] flex justify-center md:justify-end md:pr-[10%] lg:pr-[20%] items-end overflow-hidden">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Mayank Kariya"
-                className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] pointer-events-auto scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%]"
-              />
-
-              {/* Floating Badge 1: Zoho Expert */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[25%] -left-4 md:-left-8 z-20 bg-white/90 backdrop-blur-md border border-[#DDF4E7] px-4 py-2 rounded-2xl shadow-xl pointer-events-auto"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-[#67C090] rounded-full animate-pulse" />
-                  <span className="text-sm md:text-base font-bold text-[#124170] whitespace-nowrap">Zoho Expert</span>
-                </div>
-              </motion.div>
-
-              {/* Floating Badge 2: MSME Specialist */}
-              <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute top-[45%] -right-4 md:-right-6 z-20 bg-[#124170]/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-2xl shadow-xl pointer-events-auto"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-[#67C090] rounded-full animate-pulse" />
-                  <span className="text-sm md:text-base font-bold text-white whitespace-nowrap">MSME Specialist</span>
-                </div>
-              </motion.div>
-            </div>
+            <img
+              src={heroImage}
+              alt="Mayank Kariya"
+              className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] pointer-events-auto scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%]"
+            />
           </div>
         </motion.div>
       </div>
