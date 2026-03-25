@@ -101,11 +101,37 @@ export const Hero = () => {
 
           {/* Image cropping container that extends upwards to prevent head cutoff */}
           <div className="absolute bottom-0 right-0 w-full h-[200%] flex justify-center md:justify-end md:pr-[10%] lg:pr-[20%] items-end overflow-hidden">
-            <img
-              src={heroImage}
-              alt="Mayank Kariya"
-              className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] pointer-events-auto scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%]"
-            />
+            <div className="relative z-10 h-[60%] md:h-[60%] lg:h-[70%] w-[95%] sm:w-[70%] md:w-auto flex justify-center items-end scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%] pointer-events-none">
+              
+              {/* Floating Badge 1: Zoho Expert (Top Right, Behind Image) */}
+              {/* Tail pointing towards the person (bottom-left) */}
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-[25%] right-0 md:-right-12 z-0 bg-white shadow-xl px-5 py-3 rounded-2xl rounded-bl-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#67C090] animate-pulse" />
+                <span className="text-sm md:text-md font-bold text-[#124170] whitespace-nowrap">Zoho Expert</span>
+              </motion.div>
+
+              <img
+                src={heroImage}
+                alt="Mayank Kariya"
+                className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-[15px_7px_6px_rgba(0,0,0,0.3)] pointer-events-auto"
+              />
+
+              {/* Floating Badge 2: MSME Specialist (Bottom Left, On Image) */}
+              {/* Tail pointing towards the person (top-right) */}
+              <motion.div
+                animate={{ y: [10, -10, 10] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="absolute bottom-[35%] left-0 md:-left-8 z-20 bg-white shadow-xl px-5 py-3 rounded-2xl rounded-tr-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#67C090] animate-pulse" />
+                <span className="text-sm md:text-md font-bold text-[#124170] whitespace-nowrap">MSME Specialist</span>
+              </motion.div>
+
+            </div>
           </div>
         </motion.div>
       </div>
