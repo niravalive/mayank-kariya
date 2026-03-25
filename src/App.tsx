@@ -35,21 +35,27 @@ function App() {
   }, [])
 
   const [footerHeight, setFooterHeight] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const footerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const updateFooterHeight = () => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
       if (footerRef.current) {
         setFooterHeight(footerRef.current.offsetHeight)
       }
     }
 
-    // Slight delay to ensure DOM is fully painted
-    setTimeout(updateFooterHeight, 100)
-    window.addEventListener('resize', updateFooterHeight)
+    // Initial check
+    handleResize()
+    
+    // Slight delay to ensure DOM is fully painted for height calc
+    const timeout = setTimeout(handleResize, 100)
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', updateFooterHeight)
+      clearTimeout(timeout)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
@@ -57,7 +63,7 @@ function App() {
     <div className="min-h-screen font-sans selection:bg-[#DDF4E7] selection:text-[#124170] bg-[#124170]">
       <div
         className="relative z-10 bg-white shadow-[0_30px_60px_rgba(0,0,0,0.3)]"
-        style={{ marginBottom: `${footerHeight}px` }}
+        style={{ marginBottom: isMobile ? '0px' : `${footerHeight}px` }}
       >
         <Navbar />
         <main>
@@ -68,7 +74,10 @@ function App() {
           <Contact />
         </main>
       </div>
-      <div ref={footerRef} className="fixed bottom-0 left-0 right-0 z-0">
+      <div 
+        ref={footerRef} 
+        className={isMobile ? "relative z-20" : "fixed bottom-0 left-0 right-0 z-0"}
+      >
         <Footer />
       </div>
     </div>

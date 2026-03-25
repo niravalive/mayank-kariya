@@ -16,7 +16,7 @@ const LinkedinIcon = () => (
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#124170] text-[#DDF4E7] py-16 px-4">
+    <footer className="bg-[#124170] text-[#DDF4E7] py-20 px-6 sm:px-10">
       <div className="max-w-screen-2xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Col */}

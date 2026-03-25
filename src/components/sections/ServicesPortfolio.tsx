@@ -41,7 +41,7 @@ const servicesDetail = [
 
 export const ServicesPortfolio = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-24 px-4 bg-[#DDF4E7]/20" id="servicesportfolio">
+    <section className="min-h-screen flex flex-col justify-center py-24 px-6 sm:px-10 bg-[#DDF4E7]/20" id="servicesportfolio">
       <div className="max-w-screen-2xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-[#124170] mb-6">

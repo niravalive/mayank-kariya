@@ -19,7 +19,7 @@ const LinkedinIcon = () => (
 
 export const Contact = () => {
   return (
-    <section className="h-screen flex items-center px-4 md:px-8 bg-gradient-to-br from-[#DDF4E7]/20 via-white to-[#DDF4E7]/30 relative overflow-hidden" id="contact">
+    <section className="min-h-screen flex items-center py-24 px-6 sm:px-10 bg-gradient-to-br from-[#DDF4E7]/20 via-white to-[#DDF4E7]/30 relative overflow-hidden" id="contact">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#DDF4E7]/40 to-transparent -z-10" />
       <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-[#67C090]/15 rounded-full blur-3xl -z-10" />
