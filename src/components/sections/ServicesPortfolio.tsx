@@ -65,7 +65,7 @@ export const ServicesPortfolio = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0"
                   />
                 </div>
 
