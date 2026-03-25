@@ -4,7 +4,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const About = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-24 px-6 sm:px-10 relative bg-gradient-to-b from-[#DDF4E7]/10 to-white overflow-hidden" id="about">
+    <section className="min-h-screen flex flex-col justify-center py-24 px-6 sm:px-16 lg:px-40 relative bg-gradient-to-b from-[#DDF4E7]/10 to-white overflow-hidden" id="about">
       <div className="max-w-screen-2xl mx-auto w-full">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-6xl font-bold text-[#124170] mb-4">

@@ -52,41 +52,43 @@ export const Contact = () => {
             viewport={{ once: true }}
             className="lg:col-span-2 flex flex-col justify-between gap-9"
           >
-            {/* Contact Cards */}
-            <div className="space-y-9 flex-1 flex flex-col justify-center">
-              <div className="bg-white rounded-2xl p-5 border border-[#DDF4E7] shadow-sm hover:shadow-md hover:shadow-[#67C090]/10 transition-all group flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#67C090] group-hover:text-white transition-all text-[#26667F] shrink-0">
-                  <Mail className="w-5 h-5" />
+            {/* Unified Contact Details Box */}
+            <div className="bg-white rounded-2xl border border-[#DDF4E7] shadow-sm overflow-hidden flex-1 flex flex-col justify-center">
+              <div className="p-6 md:p-8 space-y-8">
+                <div className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#67C090] group-hover:text-white transition-all text-[#26667F] shrink-0">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#26667F]/40 uppercase tracking-widest mb-1">Email Address</p>
+                    <a href="mailto:hi@mayankkariya.com" className="text-lg md:text-xl font-bold text-[#124170] hover:text-[#67C090] transition-colors">
+                      hi@mayankkariya.com
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-medium text-[#26667F]/60 uppercase tracking-wider">Email</p>
-                  <a href="mailto:hi@mayankkariya.com" className="text-lg font-semibold text-[#124170] hover:text-[#67C090] transition-colors">
-                    hi@mayankkariya.com
-                  </a>
-                </div>
-              </div>
 
-              <div className="bg-white rounded-2xl p-5 border border-[#DDF4E7] shadow-sm hover:shadow-md hover:shadow-[#124170]/10 transition-all group flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#124170] group-hover:text-white transition-all text-[#26667F] shrink-0">
-                  <Phone className="w-5 h-5" />
+                <div className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#124170] group-hover:text-white transition-all text-[#26667F] shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#26667F]/40 uppercase tracking-widest mb-1">Phone Number</p>
+                    <a href="tel:+918200366609" className="text-lg md:text-xl font-bold text-[#124170] hover:text-[#124170] transition-colors">
+                      +91 820 036 6609
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-medium text-[#26667F]/60 uppercase tracking-wider">Phone</p>
-                  <a href="tel:+918200366609" className="text-lg font-semibold text-[#124170] hover:text-[#124170] transition-colors">
-                    +91 820 036 6609
-                  </a>
-                </div>
-              </div>
 
-              <div className="bg-white rounded-2xl p-5 border border-[#DDF4E7] shadow-sm hover:shadow-md hover:shadow-[#26667F]/10 transition-all group flex items-center gap-5">
-                <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#26667F] group-hover:text-white transition-all text-[#26667F] shrink-0">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-[#26667F]/60 uppercase tracking-wider">Location</p>
-                  <p className="text-lg font-semibold text-[#124170]">
-                    Surat, Gujarat, India
-                  </p>
+                <div className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 bg-[#DDF4E7] rounded-xl flex items-center justify-center group-hover:bg-[#26667F] group-hover:text-white transition-all text-[#26667F] shrink-0">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-[#26667F]/40 uppercase tracking-widest mb-1">Office Location</p>
+                    <p className="text-lg md:text-xl font-bold text-[#124170]">
+                      Surat, Gujarat, India
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
