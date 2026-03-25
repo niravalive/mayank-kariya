@@ -104,14 +104,13 @@ export const Hero = () => {
             <div className="relative z-10 h-[60%] md:h-[60%] lg:h-[70%] w-[95%] sm:w-[70%] md:w-auto flex justify-center items-end scale-97 md:scale-100 lg:scale-102 origin-bottom translate-y-[20%] pointer-events-none">
               
               {/* Floating Badge 1: Zoho Expert (Top Right, Behind Image) */}
-              {/* Tail pointing towards the person (bottom-left) */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[25%] right-0 md:-right-12 z-0 bg-white shadow-xl px-5 py-3 rounded-2xl rounded-bl-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
+                className="absolute top-[20%] md:top-[25%] -right-2 md:-right-12 z-0 bg-white shadow-xl px-3 md:px-5 py-2 md:py-3 rounded-2xl rounded-bl-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
               >
-                <div className="w-2 h-2 rounded-full bg-[#67C090] animate-pulse" />
-                <span className="text-sm md:text-md font-bold text-[#124170] whitespace-nowrap">Zoho Expert</span>
+                <div className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#67C090] animate-pulse" />
+                <span className="text-xs md:text-md font-bold text-[#124170] whitespace-nowrap">Zoho Expert</span>
               </motion.div>
 
               <img
@@ -121,14 +120,13 @@ export const Hero = () => {
               />
 
               {/* Floating Badge 2: MSME Specialist (Bottom Left, On Image) */}
-              {/* Tail pointing towards the person (top-right) */}
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-[35%] left-0 md:-left-8 z-20 bg-white shadow-xl px-5 py-3 rounded-2xl rounded-tr-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
+                className="absolute bottom-[25%] md:bottom-[35%] -left-2 md:-left-8 z-20 bg-white shadow-xl px-3 md:px-5 py-2 md:py-3 rounded-2xl rounded-tr-sm border border-[#DDF4E7]/50 pointer-events-auto flex items-center gap-2"
               >
-                <div className="w-2 h-2 rounded-full bg-[#67C090] animate-pulse" />
-                <span className="text-sm md:text-md font-bold text-[#124170] whitespace-nowrap">MSME Specialist</span>
+                <div className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#67C090] animate-pulse" />
+                <span className="text-xs md:text-md font-bold text-[#124170] whitespace-nowrap">MSME Specialist</span>
               </motion.div>
 
             </div>
