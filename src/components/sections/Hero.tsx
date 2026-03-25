@@ -56,16 +56,16 @@ export const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 text-left md:ml-auto md:mr-[25%] lg:mr-[50%] md:max-w-lg lg:max-w-xl"
+            className="flex-1 text-center md:text-left md:ml-auto md:mr-[25%] lg:mr-[50%] md:max-w-lg lg:max-w-xl"
           >
-            <p className="text-[#67C090] font-bold text-lg sm:text-xl md:text-2xl mb-2 sm:mb-4 tracking-wide uppercase">Hello I'm</p>
-            <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-extrabold font-sans text-[#124170] leading-tight mb-4 tracking-tight drop-shadow-sm">
+            <p className="text-[#67C090] font-bold text-base sm:text-xl md:text-2xl mb-2 sm:mb-4 tracking-wide uppercase">Hello I'm</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-sans text-[#124170] leading-tight mb-4 tracking-tight drop-shadow-sm">
               Mayank Kariya
             </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-[#26667F] mb-6 md:mb-8">
+            <h2 className="text-base sm:text-xl md:text-2xl font-medium text-[#26667F] mb-6 md:mb-8">
               Business Technology Consultant & Zoho Specialist
             </h2>
-            <p className="text-base sm:text-lg text-[#26667F]/80 mb-8 md:mb-10 max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-lg text-[#26667F]/80 mb-8 md:mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
               Turn operational challenges into growth opportunities with expert CRM solutions and process optimization designed specifically for MSMEs.
             </p>
             <motion.a
@@ -78,7 +78,7 @@ export const Hero = () => {
             </motion.a>
 
             {/* Mobile Socials */}
-            <div className="flex md:hidden gap-4 mt-10">
+            <div className="flex md:hidden gap-4 mt-6 justify-center">
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DDF4E7] text-[#124170] hover:bg-[#67C090] hover:text-white transition-all shadow-sm">
                 <LinkedinIcon />
               </a>
@@ -94,16 +94,19 @@ export const Hero = () => {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative md:absolute bottom-0 md:bottom-22 lg:bottom-28 right-0 w-full md:w-[50%] lg:w-[50%] flex justify-center md:justify-end items-end h-[50vh] md:h-[60vh] md:top-0 mt-auto z-10 pointer-events-none"
+          className="relative md:absolute bottom-0 md:bottom-22 lg:bottom-28 right-0 w-full md:w-[50%] lg:w-[80%] flex items-end h-[55vh] md:h-[60vh] md:top-0 mt-auto z-10 pointer-events-none"
         >
           {/* Mobile background block */}
           <div className="absolute bottom-0 w-[120%] -left-[10%] h-[70%] bg-[#67C090] rounded-t-[4rem] shadow-xl md:hidden block -z-10 opacity-90"></div>
 
-          <img
-            src={heroImage}
-            alt="Mayank Kariya"
-            className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[110%] md:h-full object-contain object-bottom drop-shadow-2xl pointer-events-auto pr-0 md:pr-10 lg:pr-20 scale-110 md:scale-110 lg:scale-125 origin-bottom"
-          />
+          {/* Image cropping container that extends upwards to prevent head cutoff */}
+          <div className="absolute bottom-0 right-0 w-full h-[200%] flex justify-center md:justify-end md:pr-[10%] lg:pr-[20%] items-end overflow-hidden">
+            <img
+              src={heroImage}
+              alt="Mayank Kariya"
+              className="relative z-10 w-[95%] sm:w-[70%] md:w-auto h-[60%] md:h-[60%] lg:h-[70%] object-contain object-bottom drop-shadow-2xl pointer-events-auto scale-105 md:scale-100 lg:scale-125 origin-bottom translate-y-[20%]"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
